@@ -1,0 +1,8 @@
+h1 Chat homepage
+- if @message
+  p = @message
+- if @response
+  p = @response
+= form_with url: chats_path, method: :patch do |f|
+  = f.text_field :message
+  = f.submit "Send"
