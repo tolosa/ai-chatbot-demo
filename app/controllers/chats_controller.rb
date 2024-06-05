@@ -4,10 +4,7 @@ class ChatsController < ApplicationController
 
   def update
     @message = params[:message]
-    client = OpenAI::Client.new(
-      access_token: Rails.application.credentials.openia.access_token,
-      log_errors: true, # TODO: configure from initializer
-    )
+    client = OpenAI::Client.new
     response = client.chat(
       parameters: {
           model: "gpt-4o",
