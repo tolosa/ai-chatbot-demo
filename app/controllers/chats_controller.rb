@@ -16,6 +16,8 @@ class ChatsController < ApplicationController
     @response = response.dig("choices", 0, "message", "content")
     
     session[:conversation] << { role: "assistant", content: @response }
+    @conversation = session[:conversation]
+    
     render :index
   end
 end

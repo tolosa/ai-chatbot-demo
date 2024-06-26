@@ -51,6 +51,7 @@ gem "slim-rails"
 gem "ruby-openai" # https://github.com/alexrudall/ruby-openai
 
 gem "dalli"
+gem "pp"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
